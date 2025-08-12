@@ -19,10 +19,10 @@ The data cleaning process proceeds as follows:
 2. Common stop words are removed using NLTK’s built-in list of English stop words. Note, stop words are
 widely used words such as “the” or “in” (Web Communications, 2025).
 3. Filter the tokens, based on:
-  1. Exact matches to words in the custom unwanted list.
-  2. Tokens that are numeric or contain letters and numbers (e.g., 2017 Election).
-  3. Tokens that include underscores.
-  4. Tokens that match random alphanumeric strings (e.g. u1rd4b6cz2) identified using regular expressions.
+     Exact matches to words in the custom unwanted list.
+     Tokens that are numeric or contain letters and numbers (e.g., 2017 Election).
+     Tokens that include underscores.
+     Tokens that match random alphanumeric strings (e.g. u1rd4b6cz2) identified using regular expressions.
 
 ## 2. Transform Data: 
 The tokenized data is converted into feature vectors using the Term Frequency - Inverse Document Frequency (TF-IDF) method. TfidfVectorizer from scikit-learn was configured to extract both unigrams and bigrams, with an adjustable max_features parameter to control vocabulary size. 
@@ -46,4 +46,7 @@ K-Means was picked for its simplicity, speed, and interpretability. K-Means is e
 DBSCAN was chosen for its ability find outliers offering a complementary perspective to K-Means. DBSCAN does not require a specific number of clusters but instead relies on two key parameters, neighborhood radius (eps), and minimum points to form a cluster (min\_samples). The eps parameter was again varied from 0.3 to 1.2 and then scores of the clustering were plotted and compared to see which value of epsilon has the best success.
 
 Both used a set of vectorized articles using TF-IDF, followed by dimensionality reduction with PCA.  
+
+# Acknowledgements: 
+We would like to thank our professor Saniat Sohrawardi for his guidance, feedback, and support throughout this project. We also appreciate the resources and facilities provided by the ESL Global Cybersecurity Institute at Rochester Institute of Technology, which made this research possible.
 

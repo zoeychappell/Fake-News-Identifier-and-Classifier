@@ -16,9 +16,9 @@ The data cleaning process proceeds as follows:
 2. Common stop words are removed using NLTK’s built-in list of English stop words. Note, stop words are
 widely used words such as “the” or “in” (Web Communications, 2025).
 3. Filter the tokens, based on:
-(a) Exact matches to words in the custom unwanted list.
-(b) Tokens that are numeric or contain letters and numbers (e.g., 2017 Election).
-(c) Tokens that include underscores.
-(d) Tokens that match random alphanumeric strings (e.g. u1rd4b6cz2) identified using regular expressions.
+1. Exact matches to words in the custom unwanted list.
+2. Tokens that are numeric or contain letters and numbers (e.g., 2017 Election).
+3. Tokens that include underscores.
+4. Tokens that match random alphanumeric strings (e.g. u1rd4b6cz2) identified using regular expressions.
 
 
